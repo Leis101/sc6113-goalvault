@@ -1,0 +1,27 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> sc6113-goalvault@1.0.0 test:ui
+> node test/browser.mjs
+
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_linux_x64_137.node'
+Require stack:
+- /workspace/scratch/bc6dfc3cce7b/goalvault/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+- /workspace/scratch/bc6dfc3cce7b/goalvault/node_modules/ganache/dist/node/core.js
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+PASS Missing MetaMask produces actionable error
+PASS Wrong chain blocks wallet connection
+PASS Wallet rejection is handled
+PASS EIP-1193 adapter connects to real local EVM
+PASS Zero target rejected before signing
+PASS UI creates actual on-chain goal
+PASS Negative deposit rejected
+PASS UI deposit updates chain balance and event history
+PASS History survives page reload via blockchain reads
+PASS UI withdraws below-target funds after local time advance
+PASS Account change clears stale wallet state
+PASS 390px mobile layout has no horizontal page overflow
+PASS No uncaught browser JavaScript errors

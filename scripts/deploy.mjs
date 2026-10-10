@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {JsonRpcProvider,ContractFactory} from 'ethers';
+const p=new JsonRpcProvider('http://127.0.0.1:8545');
+if((await p.getNetwork()).chainId!==31337n) throw Error('Local deployment requires chain 31337');
+const a=JSON.parse(fs.readFileSync('artifacts/GoalVault.json'));
+const c=await new ContractFactory(a.abi,a.bytecode,await p.getSigner(0)).deploy();
+const r=await c.deploymentTransaction().wait();
+const config={address:await c.getAddress(),chainId:31337,deploymentBlock:r.blockNumber,transactionHash:r.hash};
+fs.writeFileSync('deployment.local.json',JSON.stringify(config,null,2));
+console.log(config);

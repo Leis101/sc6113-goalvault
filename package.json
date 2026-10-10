@@ -1,0 +1,27 @@
+{
+  "name": "sc6113-goalvault",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "compile": "node scripts/compile.mjs",
+    "chain": "node scripts/chain.mjs",
+    "deploy:local": "node scripts/deploy.mjs",
+    "start": "python3 app.py",
+    "test": "npm run compile && npm run test:contract && npm run test:flask",
+    "test:ui": "node test/browser.mjs",
+    "test:contract": "node --test --test-reporter=tap test/contract.test.mjs",
+    "test:flask": "node scripts/test-flask.mjs"
+  },
+  "dependencies": {
+    "ethers": "6.15.0"
+  },
+  "devDependencies": {
+    "solc": "0.8.30",
+    "ganache": "7.9.2",
+    "playwright": "1.56.1"
+  }
+}

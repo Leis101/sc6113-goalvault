@@ -1,0 +1,168 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> sc6113-goalvault@1.0.0 test
+> npm run compile && npm run test:contract && npm run test:flask
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> sc6113-goalvault@1.0.0 compile
+> node scripts/compile.mjs
+
+Compiled GoalVault using 0.8.30+commit.73712a01.Emscripten.clang
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> sc6113-goalvault@1.0.0 test:contract
+> node --test --test-reporter=tap test/contract.test.mjs
+
+TAP version 13
+# This version of µWS is not compatible with your Node.js build:
+# Error: Cannot find module '../binaries/uws_linux_x64_137.node'
+# Require stack:
+# - /workspace/scratch/bc6dfc3cce7b/goalvault/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+# - /workspace/scratch/bc6dfc3cce7b/goalvault/node_modules/ganache/dist/node/core.js
+# Falling back to a NodeJS implementation; performance may be degraded.
+# Subtest: deployment matches exact compiled runtime bytecode
+ok 1 - deployment matches exact compiled runtime bytecode
+  ---
+  duration_ms: 193.18663
+  type: 'test'
+  ...
+# Subtest: creates an owner-indexed goal and emits GoalCreated
+ok 2 - creates an owner-indexed goal and emits GoalCreated
+  ---
+  duration_ms: 497.454515
+  type: 'test'
+  ...
+# Subtest: rejects empty and oversized UTF-8 labels
+ok 3 - rejects empty and oversized UTF-8 labels
+  ---
+  duration_ms: 24.571602
+  type: 'test'
+  ...
+# Subtest: rejects zero target
+ok 4 - rejects zero target
+  ---
+  duration_ms: 10.755152
+  type: 'test'
+  ...
+# Subtest: rejects lock shorter than 60 seconds or longer than 365 days
+ok 5 - rejects lock shorter than 60 seconds or longer than 365 days
+  ---
+  duration_ms: 27.475944
+  type: 'test'
+  ...
+# Subtest: accepts minimum and maximum lock boundaries in simulation
+ok 6 - accepts minimum and maximum lock boundaries in simulation
+  ---
+  duration_ms: 73.411877
+  type: 'test'
+  ...
+# Subtest: deposit updates goal balance, liability and event amount
+ok 7 - deposit updates goal balance, liability and event amount
+  ---
+  duration_ms: 565.618654
+  type: 'test'
+  ...
+# Subtest: rejects zero deposit
+ok 8 - rejects zero deposit
+  ---
+  duration_ms: 346.87905
+  type: 'test'
+  ...
+# Subtest: rejects deposit and withdrawal by another wallet
+ok 9 - rejects deposit and withdrawal by another wallet
+  ---
+  duration_ms: 386.494783
+  type: 'test'
+  ...
+# Subtest: rejects nonexistent goal
+ok 10 - rejects nonexistent goal
+  ---
+  duration_ms: 19.87562
+  type: 'test'
+  ...
+# Subtest: mined early withdrawal reverts without changing funds
+ok 11 - mined early withdrawal reverts without changing funds
+  ---
+  duration_ms: 689.707108
+  type: 'test'
+  ...
+# Subtest: allows deposits above target without imposing a withdrawal target
+ok 12 - allows deposits above target without imposing a withdrawal target
+  ---
+  duration_ms: 636.994826
+  type: 'test'
+  ...
+# Subtest: maturity rejects new deposits and permits full below-target withdrawal
+ok 13 - maturity rejects new deposits and permits full below-target withdrawal
+  ---
+  duration_ms: 1112.350327
+  type: 'test'
+  ...
+# Subtest: empty mature goal can close safely
+ok 14 - empty mature goal can close safely
+  ---
+  duration_ms: 709.261916
+  type: 'test'
+  ...
+# Subtest: rejects callback reentrancy and pays the owner contract exactly once
+ok 15 - rejects callback reentrancy and pays the owner contract exactly once
+  ---
+  duration_ms: 1603.60389
+  type: 'test'
+  ...
+# Subtest: failed ETH receiver rolls back accounting and can retry
+ok 16 - failed ETH receiver rolls back accounting and can retry
+  ---
+  duration_ms: 1037.571586
+  type: 'test'
+  ...
+# Subtest: rejects unsolicited ordinary ETH transfers
+ok 17 - rejects unsolicited ordinary ETH transfers
+  ---
+  duration_ms: 9.696585
+  type: 'test'
+  ...
+# Subtest: sum of all goal balances equals liabilities and contract assets cover them
+ok 18 - sum of all goal balances equals liabilities and contract assets cover them
+  ---
+  duration_ms: 323.724689
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9454.122483
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> sc6113-goalvault@1.0.0 test:flask
+> node scripts/test-flask.mjs
+
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_linux_x64_137.node'
+Require stack:
+- /workspace/scratch/bc6dfc3cce7b/goalvault/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+- /workspace/scratch/bc6dfc3cce7b/goalvault/node_modules/ganache/dist/node/core.js
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+test_assets_and_security_headers (__main__.FlaskIntegration.test_assets_and_security_headers) ... ok
+test_goal_snapshot_and_decimal_wei (__main__.FlaskIntegration.test_goal_snapshot_and_decimal_wei) ... ok
+test_health_and_public_configuration (__main__.FlaskIntegration.test_health_and_public_configuration) ... ok
+test_invalid_inputs (__main__.FlaskIntegration.test_invalid_inputs) ... ok
+test_owner_filtered_event_history (__main__.FlaskIntegration.test_owner_filtered_event_history) ... ok
+test_read_only_and_not_found (__main__.FlaskIntegration.test_read_only_and_not_found) ... ok
+test_unconfigured_server_is_live_but_not_blockchain_ready (__main__.FlaskIntegration.test_unconfigured_server_is_live_but_not_blockchain_ready) ... ok
+test_wrong_chain_fails_closed (__main__.FlaskIntegration.test_wrong_chain_fails_closed) ... ok
+test_wrong_contract_bytecode_fails_closed (__main__.FlaskIntegration.test_wrong_contract_bytecode_fails_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.205s
+
+OK

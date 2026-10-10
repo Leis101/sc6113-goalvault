@@ -1,0 +1,42 @@
+{
+  "scope": "Local Ganache EVM; EIP-1193 test adapter, not MetaMask or Sepolia",
+  "deployment": {
+    "hash": "0x9be6ca2bbf56e592a15bc904f1765efdd14e7f842b996a3e375e3f6119b877b6",
+    "block": 1,
+    "address": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab"
+  },
+  "history": {
+    "from": 1,
+    "items": [
+      {
+        "amount": "20000000000000000",
+        "block": 5,
+        "confirmations": 1,
+        "event": "Withdrawn",
+        "goalId": "0",
+        "hash": "0xe5479043d7f80a66752c2c0115e934fbfd9d3fa4d0c316d6ae50a7cf9cb1f958",
+        "index": 0
+      },
+      {
+        "amount": "20000000000000000",
+        "block": 3,
+        "confirmations": 3,
+        "event": "Deposited",
+        "goalId": "0",
+        "hash": "0x337c3e5661f4b8e0b8c149295af00ef3b267c28ce38024e77d42d058b9c7d439",
+        "index": 0
+      },
+      {
+        "amount": null,
+        "block": 2,
+        "confirmations": 4,
+        "event": "GoalCreated",
+        "goalId": "0",
+        "hash": "0xe62d3b5e6471e379edc04903f7cc7655e48d26129181d59d99e120aacd8ba78d",
+        "index": 0
+      }
+    ],
+    "nextTo": null,
+    "to": 5
+  }
+}

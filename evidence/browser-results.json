@@ -1,0 +1,57 @@
+{
+  "scope": "Python Flask/Gunicorn backend with local EVM and injected test provider; actual MetaMask not tested",
+  "results": [
+    {
+      "test": "Missing MetaMask produces actionable error",
+      "status": "PASS"
+    },
+    {
+      "test": "Wrong chain blocks wallet connection",
+      "status": "PASS"
+    },
+    {
+      "test": "Wallet rejection is handled",
+      "status": "PASS"
+    },
+    {
+      "test": "EIP-1193 adapter connects to real local EVM",
+      "status": "PASS"
+    },
+    {
+      "test": "Zero target rejected before signing",
+      "status": "PASS"
+    },
+    {
+      "test": "UI creates actual on-chain goal",
+      "status": "PASS"
+    },
+    {
+      "test": "Negative deposit rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "UI deposit updates chain balance and event history",
+      "status": "PASS"
+    },
+    {
+      "test": "History survives page reload via blockchain reads",
+      "status": "PASS"
+    },
+    {
+      "test": "UI withdraws below-target funds after local time advance",
+      "status": "PASS"
+    },
+    {
+      "test": "Account change clears stale wallet state",
+      "status": "PASS"
+    },
+    {
+      "test": "390px mobile layout has no horizontal page overflow",
+      "status": "PASS"
+    },
+    {
+      "test": "No uncaught browser JavaScript errors",
+      "status": "PASS"
+    }
+  ]
+}
